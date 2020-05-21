@@ -20,10 +20,6 @@ from petastorm.etl.dataset_metadata import materialize_dataset
 
 
 def load_dataframe(dataframe_url: str):
-
-    print("++++++++++++++++")
-    print(dataframe_url)
-    print("++++++++++++++++")
     spark = Session().get_session()
     dataframe = spark.read.load(dataframe_url)
 
